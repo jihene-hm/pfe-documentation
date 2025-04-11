@@ -1,0 +1,11 @@
+services:
+  mkdocs:
+    build:
+      context: .
+      dockerfile: ./.docker/docs/Dockerfile
+    container_name: docs-dwh
+    volumes:
+      - ./docs:/docs
+    ports:
+      - "8001:8000"
+    restart: unless-stopped

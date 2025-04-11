@@ -1,0 +1,35 @@
+site_name: "SIFLOW - Mission Data Warehouse"
+site_description: "Documentation de la mission Data Warehouse du projet SIFLOW"
+site_author: "jihene hammami"
+docs_dir: content
+theme:
+  name: material
+  language: fr
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - search.highlight
+  palette:
+    primary: indigo
+    accent: indigo
+plugins:
+  - search
+  - mermaid2
+markdown_extensions:
+  - admonition
+  - codehilite
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+nav:
+  - Accueil: index.md
+  - Architecture:
+    - Vue d'ensemble: architecture/overview.md
+    - Composants: architecture/components.md
+  - Implémentation:
+    - Guide technique: implementation/technical-guide.md
+    - Bonnes pratiques: implementation/best-practices.md
+  - Tests: testing/index.md
+  - Opérations: operations/index.md
